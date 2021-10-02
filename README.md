@@ -1,5 +1,20 @@
 # CS 1440 Assignment 2: Big Data Processing 
 
+Clone this repository and use it as a basis for your work.  Run each of these
+commands one-at-a-time, without the '$' (that represents your shell's prompt).
+Be sure to replace the words `LAST`, `FIRST`, and `USERNAME` with your own
+names.
+
+```
+$ git clone git@gitlab.cs.usu.edu:erik.falor/cs1440-falor-erik-assn2 cs1440-LAST-FIRST-assn2
+$ cd cs1440-LAST-FIRST-assn2
+$ git remote rename origin old-origin
+$ git remote add origin git@gitlab.cs.usu.edu:USERNAME/cs1440-LAST-FIRST-assn2.git
+$ git push -u origin --all
+```
+
+## Instructions
+
 * [Instructions](./instructions/README.md)
 * [Hints](./instructions/Hints.md)
 * [Rubric](./instructions/Rubric.md)
