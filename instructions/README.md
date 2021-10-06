@@ -24,13 +24,13 @@ Average Score % (Grade)          | 92.33% (A-)
 
 The starter code includes a selection of output examples.  The corresponding
 data files can be created from the provided instructions by using your Text
-Tools.  These data sets are for your use as you test and debug your program.
-Reduced data sets that are especially good for interactive debugging are
-Washington D.C., Delaware and Rhode Island.  Your submission will be graded by
-running it against the full BLS data set for the year 2020, as well as a
-**special, crafted dataset** that you will not have access to.  To ensure that
-your program will get full marks, test it thoroughly by running it against the
-**full** data set.
+Tools (or the "real" text tools provided with your shell).  These data sets are
+for your use as you test and debug your program.  Reduced data sets that are
+especially good for interactive debugging are Washington D.C., Delaware and
+Rhode Island.  Your submission will be graded by running it against the full
+BLS data set for the year 2020, as well as a **special, crafted data set** that
+you will not have access to.  To ensure that your program will get full marks,
+test it thoroughly by running it against the **full** data set.
 
 *   The complete CSV file is too big to include in the git repository, and so
     you won't get it by cloning this project.
@@ -45,6 +45,11 @@ your program will get full marks, test it thoroughly by running it against the
     *   Use the smaller data sets while you are developing the program, and
         test against larger data sets as your project nears completion
     *   Use the `wc` tool to see which data sets are the small ones
+    *   The data sets with `_reversed` names are identical to their
+        corresponding `_combined` data sets save for one difference - they are
+        created with `tac` instead of `cat`.  This reversal of their contents
+        should make no difference to your program.  Use these data sets to
+        ensure this is the case.
 
 
 ### Don't commit huge files to git!

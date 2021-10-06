@@ -13,7 +13,26 @@ $ git remote add origin git@gitlab.cs.usu.edu:USERNAME/cs1440-LAST-FIRST-assn2.g
 $ git push -u origin --all
 ```
 
-## Instructions
+## Updated testing data sets
+
+Your program should produce the same output *regardless* of the order of the
+lines of the input files.  I have created instructions for new data sets to
+allow you to test that your program isn't affected by the order of its inputs.
+You can pull these instructions directly into your repo by running this
+command:
+
+```
+$ git pull old-origin master
+```
+
+If you don't have my repo's URL configured under the name `old-origin`, you can
+run these commands instead:
+
+```
+$ git remote add eriks-origin git@gitlab.cs.usu.edu:erik.falor/cs1440-falor-erik-assn2
+$ git pull eriks-origin master
+```
+
 
 * [Instructions](./instructions/README.md)
 * [Hints](./instructions/Hints.md)
@@ -56,7 +75,7 @@ needed by the report.
 ## Expected Behavior
 
 Each subfolder of [data/](data) contains a file named `output.txt`.
-Your program's output for that dataset should match that file exactly.
+Your program's output for that data set should match that file exactly.
 
 Instructions for creating the testing data sets using the Text Tools from
 Assignment #1 are provided.  These crafted input files should form the basis of

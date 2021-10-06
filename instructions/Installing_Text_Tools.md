@@ -101,7 +101,7 @@ After installing your text tools and creating `startgrep`, you can slightly
 modify the commands in the associated `data/*/README.md` file so that you can
 utilize your own text tools instead of the built-in Unix text tools.
 
-The following commands are listed in `data/UT_all_industries/README.md` to create the `UT_all_industries` dataset.
+The following commands are listed in `data/UT_all_industries/README.md` to create the `UT_all_industries` data set.
 
     head -n 1 ../USA_full/2020.annual.singlefile.csv > header.csv
     grep '^"49' ../USA_full/2020.annual.singlefile.csv > dat.csv

@@ -8,7 +8,7 @@ This document describes the meaning of the columns in this file:
 
 The single file CSV lacks some of the columns listed in the document above.
 Carefully read the document to identify which ones are missing from your
-dataset.
+data set.
 
 
 ## FIPS area codes
