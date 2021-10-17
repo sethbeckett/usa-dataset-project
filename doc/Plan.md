@@ -4,10 +4,25 @@
 
 **Deliver:**
 
-*   A detailed written description of the problem this program aims to solve.
-*   Describe what a *good* solution looks like.
-    *   List what you already know how to do.
-    *   Point out any challenges that you can foresee.
+This Program will aim to allow a user to input a directory containing a CSV file that
+holds industry statistics based on FIPS codes, as well as the related area titles that 
+correlate to those FIPS codes. The program will then keep track of the pertinent statistics
+and print them out to the user. The statistics include: Number of FIPS areas in report, Total annual wages, 
+Area with maximum annual wages, Maximum reported wage, Total number of establishments, Area with most 
+establishments, Maximum # of establishments, Total annual employment level, Area with maximum employment, and 
+Maximum reported employment level. It will report these stats for all the industries combined, as well as 
+specifically the software publishing industry.
+
+
+Currently I know how to read a file line by line to gather information from it, as  well how to use basic string
+methods to do some useful things (like splitting and checking if something is in a string). I haven't really used
+dictionaries before, but to me it seems like it shouldn't be too bad, as they seem similar to lists in the sense
+that instead of an index used to access each value, each value has a key that can be any immutable data type.
+
+I still need to reread through the instructions more times to understand exactly the format this is wanted to be
+put in, but it looks like reading through the starter code gives very useful insight. I will likely need to focus
+on checking the FIPS codes, putting the valid ones in a set or dictionary, and then going through the CSV, checking
+the first data field(FIPS code) and adding that data to the corresponding section of the report if it's valid.
 
 
 ## Phase 1: System Analysis *(10%)*
@@ -22,14 +37,10 @@
 ## Phase 2: Design *(30%)*
 
 **Deliver:**
+* Check that an argument was put in and if not print usage message
 
-*   Function signatures that include:
-    *   Descriptive names.
-    *   Parameter lists.
-    *   Documentation strings that explain the purpose, inputs and outputs.
-*   Pseudocode that captures how each function works.
-    *   Explain what happens in the face of good and bad input.
-    *   Write a few specific examples that occurred to you.
+* Open area_titles.csv file
+* Read through each line, check if the FIPS code is valid
 
 
 ## Phase 3: Implementation *(15%)*
