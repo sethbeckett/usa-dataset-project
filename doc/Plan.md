@@ -28,19 +28,64 @@ the first data field(FIPS code) and adding that data to the corresponding sectio
 ## Phase 1: System Analysis *(10%)*
 
 **Deliver:**
+* Unique input is a directory name
+  * Directory contains area_titles.csv, as well as the CSV file from which data is extracted
 
-*   List all of the data that is used by the program, making note of where it comes from.
-*   Explain what form the output will take.
-*   Describe what algorithms and formulae will be used (but don't write them yet).
+* Outputs the statistics listed in the Requirements section, formatted so that it tells
+the user which statistics it is listing
+
+* The only formulas/algorithms that will be used are simple addition (for when a FIPS code should be used
+and data should be added to the report), and the max function (to find the max value in the list) which is already
+implemented
+
+
+* List all of the data that is used by the program, making note of where it comes from.
+* Explain what form the output will take.
+* Describe what algorithms and formulae will be used (but don't write them yet).
 
 
 ## Phase 2: Design *(30%)*
 
 **Deliver:**
 * Check that an argument was put in and if not print usage message
+  * exit
 
-* Open area_titles.csv file
-* Read through each line, check if the FIPS code is valid
+* Open area_titles.csv file (let it crash if not a valid file or directory)
+* Create myFipsDict to store valid FIPS codes and titles
+* Read through each line
+  * check if FIPS has letters (isnumeric/isdigit?) //this block is what determines whether or not
+    * check if last three digits aren't 000          the fips code is to be excluded or included
+      * codeAndArea = split the line with comma, maxsplit delimiter of one
+      * myFipsDict key = codeAndArea[0], value is second element
+* CLOSE FIPS FILE
+
+* updateReport(report rpt, array fipsRow, ) //ask how to implement this but just do it the long way
+
+* Open singlefile csv
+  * loop through lines
+    * singleFipsRow = split by commas
+    * if first element is in myFipsDict
+      * if industry_code isNumeric and int() is 10 //singleFipsRow[2]
+      * //can move this section into own function, possibly reuse with other
+        * if own_code isNumeric and is 0 // singleFipsRow[1], need to update all data set
+          * rpt all num_areas += 1
+          * rpt all totalwages += singleFipsRow[10]
+          * if singleFipsRow[10] > rpt.all.max_annual_wage[1]
+            * rpt.all.max_annual_wage[1] = singleFipsRow[10] 
+            * rpt.all.max_annual_wage[0] = myFipsDict[singleFipsRow[0]] //gets area title
+          * rpt all number of establishments += singleFipsRow[8]
+          * if singleFipsRow[8] > rpt.all.max_estab[1]
+            * rpt.all.max_estab[1] = singleFipsRow[8]
+            * rpt.all.max_estab[0] = myFipsDict[singleFipsRow[0]]
+          * rpt all total employment += fipsRow[9]
+          * if fipsRow[9] > rpt.all.maxEmployment[1]
+            * rpt.all.maxEmployment[1] = fipsRow[9]
+            * update max employment area name too
+      
+        * if industry code isNumeric and is 5112
+          * if own_code isNumeric and is 5 //pertinent to software publishing industry
+            * do the same thing as done with all industries but for the software publishing industry
+* CLOSE SINGLEFILE CSV
 
 
 ## Phase 3: Implementation *(15%)*
