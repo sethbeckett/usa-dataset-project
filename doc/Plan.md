@@ -91,21 +91,29 @@ implemented
 
 ## Phase 3: Implementation *(15%)*
 
-**Deliver:**
+The implementation phase was interesting, as I found that I had not adequately accounted for how the data was processed.
+I needed to strip it down a bit more than I thought by removing the quote marks, and I also had to convert some fields of 
+data into integers, depending how the report object used them.
 
-*   (More or less) working Python code.
-*   Note any relevant and interesting events that happened while you wrote the code.
-    *   e.g. things you learned, things that didn't go according to plan
+One bigger thing that I ended up doing is just creating variables for the different data fields in each line, so that my code was a lot more readable.
+I also implemented the code differently so that I could use a function rather than hardcoding everything each time that I updated the report.
 
 
 ## Phase 4: Testing & Debugging *(30%)*
 
-**Deliver:**
+The first test that I ran was on the DC_all_industries directory. By doing this and having the report print out straight 0's for each
+category, I found that my initial dictionary wasn't being setup right. I fixed this by stripping down each part of the line to get rid
+of quotation marks.
 
-*   A set of test cases that you have personally run on your computer.
-    *   Include a description of what happened for each test case.
-    *   For any bugs discovered, describe their cause and remedy.
-*   Write your test cases in plain language such that a non-coder could run them and replicate your experience.
+I then ran it again and found that I needed to do that for the part of my code that processes the 2020.annual.singlefile.csv data.
+
+Once I got that to work, I tried it on the UT_combined directory, and after that ran smoothly I tried it on the UT_reversed. Upon both of those successes,
+tried it out with the USA full directory.
+
+If one was to test out my code, they navigate to any of the directories in the data directory, and follow the README's instructions on how to create that 
+state's 2020.annual.singlefile.csv file. They would then change directories to make sure that they are in the projects parent directory and run "python3 src/main.py"
+followed by their test directory's relative path. The program would then output the stats, which could be compared with the output.txt file in that same test directory
+to verify the functionality.
 
 
 ## Phase 5: Deployment *(5%)*
