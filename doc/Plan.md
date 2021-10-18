@@ -59,11 +59,12 @@ implemented
       * myFipsDict key = codeAndArea[0], value is second element
 * CLOSE FIPS FILE
 
-* updateReport(report rpt, array fipsRow, ) //ask how to implement this but just do it the long way
+* make function updateReport(report rpt, array fipsRow, ) //ask how to implement this but just do it the long way
 
 * Open singlefile csv
   * loop through lines
     * singleFipsRow = split by commas
+    * make outer if conditional to check if FIPS code is valid, can probs skip other ifs
     * if first element is in myFipsDict
       * if industry_code isNumeric and int() is 10 //singleFipsRow[2]
       * //can move this section into own function, possibly reuse with other
