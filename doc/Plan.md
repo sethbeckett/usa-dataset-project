@@ -98,6 +98,8 @@ data into integers, depending how the report object used them.
 One bigger thing that I ended up doing is just creating variables for the different data fields in each line, so that my code was a lot more readable.
 I also implemented the code differently so that I could use a function rather than hardcoding everything each time that I updated the report.
 
+I used https://devdocs.io/python~3.9/ to look into string methods, which was extremely helpful and in a nice, user-friendly format
+
 
 ## Phase 4: Testing & Debugging *(30%)*
 
@@ -110,7 +112,8 @@ I then ran it again and found that I needed to do that for the part of my code t
 Once I got that to work, I tried it on the UT_combined directory, and after that ran smoothly I tried it on the UT_reversed. Upon both of those successes,
 tried it out with the USA full directory.
 
-If one was to test out my code, they navigate to any of the directories in the data directory, and follow the README's instructions on how to create that 
+If one was to test out my code, they would first navigate to the instructions directory, open the README file, and install the full USA csv data by
+following the instructions under the "Preparation" section. Then they navigate to any of the directories in the data directory, and follow the README's instructions on how to create that 
 state's 2020.annual.singlefile.csv file. They would then change directories to make sure that they are in the projects parent directory and run "python3 src/main.py"
 followed by their test directory's relative path. The program would then output the stats, which could be compared with the output.txt file in that same test directory
 to verify the functionality.
@@ -118,28 +121,18 @@ to verify the functionality.
 
 ## Phase 5: Deployment *(5%)*
 
-**Deliver:**
-
-*   Your repository pushed to GitLab.
-*   **Verify** that your final commit was received by browsing to its project page on GitLab.
-    *   Review the project to ensure that all required files are present and in correct locations.
-*   **Validate** that your submission is complete and correct by cloning it to a new location on your computer and re-running it.
-    *   Run through your test cases to avoid nasty surprises.
+For this phase I cloned it from my gitLab repo and ran my tests from that temporary location
 
 
 ## Phase 6: Maintenance
+The parts of my program that might be hardest to decipher is the actual implementation section of the plan compared to the code.
+I feel that the code is actually cleaner and reads better than the implementation section, but I didn't want to rewrite the implementation 
+when the actual code felt readable.
 
-**Deliver:**
+The vast majority of my time was spent rereading instructions and pounding out the overrall logic in the implementation section. Once that was good, I was able to code it fairly
+quickly. Therefore I think that a bug would be relatively simple to track down.
 
-*   Write brief and honest answers to these questions: *(Note: do this before you complete **Phase 5: Deployment**)*
-    *   What parts of your program are sloppily written and hard to understand?
-        *   Are there parts of your program which you aren't quite sure how/why they work?
-        *   If a bug is reported in a few months, how long would it take you to find the cause?
-    *   Will your documentation make sense to
-        *   anybody besides yourself?
-        *   yourself in six month's time?
-    *   How easy will it be to add a new feature to this program in a year?
-    *   Will your program continue to work after upgrading
-        *   your computer's hardware?
-        *   the operating system?
-        *   to the next version of Python?
+Documentation will hopefully make sense to other people, I tried to keep it as general as possible. If one takes the time to read through all of the different README's it should 
+be especially understandable.
+
+This program should be fairly modular, and the only issue I could see is if one is running it through window's command prompt, where \ is used instead of /.
