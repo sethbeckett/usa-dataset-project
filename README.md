@@ -1,4 +1,4 @@
-# CS 1440 Assignment 2: Big Data Processing 
+# Big Data Processing Practice
 
 Clone this repository and use it as a basis for your work.  Run each of these
 commands one-at-a-time, without the '$' (that represents your shell's prompt).

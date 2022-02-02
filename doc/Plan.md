@@ -1,8 +1,6 @@
 # Software Development Plan
 
-## Phase 0: Requirements Specification *(10%)*
-
-**Deliver:**
+## Phase 0: Requirements Specification 
 
 This Program will aim to allow a user to input a directory containing a CSV file that
 holds industry statistics based on FIPS codes, as well as the related area titles that 
@@ -12,7 +10,6 @@ Area with maximum annual wages, Maximum reported wage, Total number of establish
 establishments, Maximum # of establishments, Total annual employment level, Area with maximum employment, and 
 Maximum reported employment level. It will report these stats for all the industries combined, as well as 
 specifically the software publishing industry.
-
 
 Currently I know how to read a file line by line to gather information from it, as  well how to use basic string
 methods to do some useful things (like splitting and checking if something is in a string). I haven't really used
@@ -25,9 +22,8 @@ on checking the FIPS codes, putting the valid ones in a set or dictionary, and t
 the first data field(FIPS code) and adding that data to the corresponding section of the report if it's valid.
 
 
-## Phase 1: System Analysis *(10%)*
+## Phase 1: System Analysis 
 
-**Deliver:**
 * Unique input is a directory name
   * Directory contains area_titles.csv, as well as the CSV file from which data is extracted
 
@@ -44,9 +40,8 @@ implemented
 * Describe what algorithms and formulae will be used (but don't write them yet).
 
 
-## Phase 2: Design *(30%)*
+## Phase 2: Design 
 
-**Deliver:**
 * Check that an argument was put in and if not print usage message
   * exit
 
@@ -89,7 +84,7 @@ implemented
 * CLOSE SINGLEFILE CSV
 
 
-## Phase 3: Implementation *(15%)*
+## Phase 3: Implementation 
 
 The implementation phase was interesting, as I found that I had not adequately accounted for how the data was processed.
 I needed to strip it down a bit more than I thought by removing the quote marks, and I also had to convert some fields of 
@@ -101,7 +96,7 @@ I also implemented the code differently so that I could use a function rather th
 I used https://devdocs.io/python~3.9/ to look into string methods, which was extremely helpful and in a nice, user-friendly format
 
 
-## Phase 4: Testing & Debugging *(30%)*
+## Phase 4: Testing & Debugging 
 
 The first test that I ran was on the DC_all_industries directory. By doing this and having the report print out straight 0's for each
 category, I found that my initial dictionary wasn't being setup right. I fixed this by stripping down each part of the line to get rid
@@ -119,7 +114,7 @@ followed by their test directory's relative path. The program would then output 
 to verify the functionality.
 
 
-## Phase 5: Deployment *(5%)*
+## Phase 5: Deployment 
 
 For this phase I cloned it from my gitLab repo and ran my tests from that temporary location
 
